@@ -5,7 +5,15 @@ services:
     image: prom/prometheus
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
-      - ./prometheus/alert.rules:/etc/prometheus/alert.rules
+      - ./prometheus/prometheus.rules.yml:/etc/prometheus/prometheus.rules.yml
     ports:
       - 9090:9090
-    
+    network_mode: "host"
+  django-web:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./api-django:/app
+    ports:
+      - 8000:8000
+    network_mode: "host"
