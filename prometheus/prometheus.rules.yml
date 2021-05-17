@@ -1,0 +1,11 @@
+groups:
+- name: monitoramento
+  rules:
+  - alert: PrometheusTargetFalhou
+    expr: up == 0
+    for: 0m
+    labels:
+      severity: critical
+    annotations:
+      summary: Prometheus Target Falhou (instace{{ $labels.instance}})
+      description: Ocorreu um problema em um Target do Prometheus

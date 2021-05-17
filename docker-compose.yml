@@ -19,3 +19,11 @@ services:
     ports:
       - 8000:8000
     network_mode: "host"
+  alertmanager:
+    container_name: alertmanager
+    image: prom/alertmanager
+    volumes:
+      - ./alertmanager/alertmanager.yml:/etc/alertmanager/alertmanager.yml
+    ports:
+      - 9093:9093
+    network_mode: "host"
