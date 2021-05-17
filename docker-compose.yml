@@ -9,11 +9,3 @@ services:
     ports:
       - 9090:9090
     network_mode: "host"
-  django-web:
-    build: .
-    command: python3 manage.py runserver 0.0.0.0:8000
-    volumes:
-      - ./api-django:/app
-    ports:
-      - 8000:8000
-    network_mode: "host"
