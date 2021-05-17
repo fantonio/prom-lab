@@ -2,4 +2,3 @@ route:
   receiver: 'e-mail'
 receivers:
   - name: 'e-mail'
-
