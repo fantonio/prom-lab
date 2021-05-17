@@ -26,4 +26,3 @@ typed-ast==1.4.1
 validate-docbr==1.7.0
 whitenoise==5.2.0
 wrapt==1.12.1
-
