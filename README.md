@@ -31,4 +31,3 @@ A cada 10 requisições do tipo POST, a décima primeira será um 503.
 Novos clientes adicionados retornam 201.
 
 Endpoints desconhecidos retornam 404.
-
