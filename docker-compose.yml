@@ -27,4 +27,3 @@ services:
     ports:
       - 9093:9093
     network_mode: "host"
-
