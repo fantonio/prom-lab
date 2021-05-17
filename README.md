@@ -1,1 +1,1 @@
-# prom-lab
+# Prometheus - Alura
