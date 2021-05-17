@@ -7,3 +7,4 @@ scrape_configs:
   - job_name: django-web
     static_configs:
       - targets: ['localhost:8000]
+
