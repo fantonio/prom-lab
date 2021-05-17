@@ -2,6 +2,7 @@ version: '3.3'
 
 services:
   prometheus:
+    container_name: prometheus
     image: prom/prometheus
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
@@ -10,8 +11,9 @@ services:
       - 9090:9090
     network_mode: "host"
   django-web:
+    container_name: django-web
     build: .
-    command: python3 manage.py runserver 0.0.0.0:8000
+    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - ./api-django:/app
     ports:
